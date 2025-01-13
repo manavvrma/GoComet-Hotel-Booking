@@ -1,0 +1,137 @@
+.hotelPage {
+  font-family: Inter, sans-serif;
+}
+
+.hotelBackground {
+  position: relative;
+}
+
+.hotelBackgroundImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hotelName1,
+.hotelLocation1,
+.hotelRating1 {
+  text-align: center;
+  color: black;
+}
+
+.hotelName1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.hotelLocation1 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hotelRating1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ratingIcon1 {
+  width: 24px;
+  margin-right: 5px;
+}
+
+.mainContent1 {
+  padding: 20px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.roomList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.room {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  border: 1px solid rgba(135, 135, 135, 1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.roomImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.roomDetails {
+  padding: 10px;
+}
+
+.roomName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.roomPrice {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.viewFacilitiesButton,
+.bookNowButton {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.viewFacilitiesButton {
+  background: #0a66bb;
+  color: white;
+}
+
+.bookNowButton {
+  background: #28a745;
+  color: white;
+}
+
+.viewFacilitiesButton:hover {
+  background: #085394;
+}
+
+.bookNowButton:hover {
+  background: #218838;
+}
+
+.hotelDescription {
+  margin-top: 20px;
+}
+
+.hotelDescription h2 {
+  font-size: 24px;
+}
+
+.hotelDescription p {
+  font-size: 14px;
+  line-height: 1.6;
+}

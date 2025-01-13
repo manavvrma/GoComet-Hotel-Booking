@@ -1,0 +1,121 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 1);
+  font: 400 14px Inter, sans-serif;
+}
+
+.filtersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterHeading {
+  font-size: 27px;
+  font-weight: normal;
+  margin-left: 27px;
+}
+
+.clearButton {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(10, 102, 187, 1);
+  cursor: pointer;
+  margin: 6px 46px 0 0;
+}
+
+.clearButton:hover {
+  text-decoration: underline;
+}
+
+.checkedItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 27px;
+  margin-bottom: 15px;
+}
+
+.checkedItem {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: rgba(10, 102, 187, 0.12);
+  border-radius: 20px;
+  font-size: 14px;
+  color: rgba(10, 102, 187, 1);
+  border: 1px solid rgba(10, 101, 187, 0.918);
+}
+
+.divider {
+  width: 246px;
+  border: 1px solid rgba(10, 102, 187, 0.12);
+}
+
+.section {
+  display: flex;
+  width: 246px;
+  flex-direction: column;
+  padding: 25px 35px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: normal;
+
+  margin-top: 0px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.filterItem {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.checkbox.checked {
+  background-color: rgba(10, 102, 187, 1);
+  border: 1px solid rgba(10, 102, 187, 1);
+}
+
+.checkbox.checked::after {
+  content: "✓";
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,137 @@
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.searchInputContainer {
+  position: relative; /* Ensures the dropdown is positioned relative to this container */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid rgba(135, 135, 135, 1);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%; /* Make the input container take full width */
+}
+
+.searchIcon,
+.calendarIcon,
+.endIcon {
+  aspect-ratio: 0.79;
+  width: 11px;
+  margin: auto 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  width: 276px;
+}
+
+.dateRangePickerContainer {
+  /* display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6.67px 12px;
+  border: 1px solid rgba(135, 135, 135, 1);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  width: 140px; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6.67px 12px;
+  border: 1px solid rgba(135, 135, 135, 1);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.dateDivider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(135, 135, 135, 1);
+}
+
+.guestsInput {
+  width: 60px;
+  padding: 9px;
+  border: 1px solid rgba(135, 135, 135, 1);
+  border-radius: 2px;
+  outline: none;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  border: 1px solid rgba(10, 102, 187, 1);
+  background-color: rgba(10, 102, 187, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.searchResults {
+  border-radius: 0 0 3px 3px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 3px 13px -2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position dropdown below the input box */
+  left: 0;
+  width: 100%; /* Ensure it matches the input's width */
+  padding-bottom: 10px;
+  color: rgba(0, 0, 0, 1);
+  z-index: 10;
+}
+
+.resultsList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  margin-top: 7px;
+}
+
+.resultItem {
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.resultItem:hover {
+  background-color: rgba(10, 102, 187, 0.05);
+}
+
+.hiddenDateInput {
+  display: none;
+}
+
+.selectedResult {
+  background-color: rgba(10, 102, 187, 0.12);
+  z-index: 10;
+  padding: 9px 20px;
+}
+
+@media (max-width: 991px) {
+  .searchForm {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.loading {
+  text-align: center;
+  color: rgba(135, 135, 135, 1);
+  margin-top: 10px;
+}

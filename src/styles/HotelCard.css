@@ -1,46 +1,51 @@
-.card {
+.hotelCard {
   border-radius: 4px;
   display: flex;
-  width: 100%;
   flex-direction: column;
+  width: 290px;
+  height: 320px;
+  /* max-width: 300px; */
+  /* max-height: 400px; */
   font-family: Inter, sans-serif;
-  padding: 14px 15px;
+  place-items: center;
+  padding: 13px 0 0 0;
   border: 1px solid rgba(135, 135, 135, 1);
 }
 
-.image {
+.hotelImage {
   aspect-ratio: 1.3;
   object-fit: contain;
   object-position: center;
-  width: 100%;
+  width: 260px;
+  height: 200px;
 }
 
-.content {
+.hotelContent {
   display: flex;
-  margin-top: 20px;
-  width: 100%;
-  gap: 20px;
-  font-weight: 400;
   justify-content: space-between;
+  margin-top: 17px;
+  width: 90%;
+  gap: 40px;
+  font-weight: 400;
 }
 
-.info {
+.hotelInfo {
   display: flex;
   flex-direction: column;
 }
 
-.title {
+.hotelTitle {
   color: rgba(0, 0, 0, 1);
   font-size: 16px;
 }
 
-.location {
+.hotelLocation {
   color: rgba(0, 0, 0, 0.75);
   font-size: 12px;
   margin-top: 6px;
 }
 
-.rating {
+.hotelRating {
   display: flex;
   gap: 2px;
   font-size: 12px;
@@ -50,23 +55,24 @@
 .ratingIcon {
   aspect-ratio: 1;
   object-fit: contain;
-  object-position: center;
-  width: 18px;
+  object-position: top;
+  width: 16px;
 }
 
-.footer {
+.hotelFooter {
   display: flex;
   margin-top: 13px;
-  gap: 26px;
+  gap: 10px;
 }
 
-.price {
+.hotelPrice {
   display: flex;
   font-size: 16px;
   color: rgba(0, 0, 0, 1);
   font-weight: 700;
   flex: 1;
   margin: auto 0;
+  width: 134px;
 }
 
 .priceIcon {
@@ -78,18 +84,20 @@
 
 .viewButton {
   border-radius: 2px;
-  background-color: rgba(10, 102, 187, 1);
+  background-color: #0a66bb;
   display: flex;
   gap: 4px;
   font-size: 14px;
   color: rgba(255, 255, 255, 1);
   font-weight: 400;
-  flex: 1;
-  padding: 8px 23px;
-  border: 1px solid rgba(10, 102, 187, 1);
+  /* flex: 1; */
+  border: 1px solid #0a66bb;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  height: 34px;
+  width: 117px;
 }
 
 .viewIcon {
@@ -100,7 +108,7 @@
 }
 
 @media (max-width: 991px) {
-  .card {
+  .hotelCard {
     margin-top: 24px;
   }
 
