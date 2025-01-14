@@ -4,7 +4,6 @@
   flex-direction: column;
   width: 290px;
   height: 320px;
-
   font-family: Inter, sans-serif;
   place-items: center;
   padding: 13px 0 0 0;
@@ -89,7 +88,6 @@
   font-size: 14px;
   color: rgba(255, 255, 255, 1);
   font-weight: 400;
-  /* flex: 1; */
   border: 1px solid #0a66bb;
   cursor: pointer;
   align-items: center;
