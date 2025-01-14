@@ -53,14 +53,9 @@ export default function HotelPage() {
       <Header />
       <main className="mainContent1">
         <div className="hotelBackground">
-          <img
-            src={placeholderImage}
-            alt={`${hotel.name} hotel`}
-            className="hotelBackgroundImage"
-          />
           <h1 className="hotelName1">{hotel.name}</h1>
           <div className="hotelLocation1">
-            {hotel.city}, {hotel.country}
+            {hotel.city} {hotel.country}
           </div>
           <div className="hotelRating1">
             <img
@@ -70,6 +65,11 @@ export default function HotelPage() {
             />
             <span>{hotel.rating}</span>
           </div>
+          <img
+            src={placeholderImage}
+            alt={`${hotel.name} hotel`}
+            className="hotelBackgroundImage"
+          />
         </div>
         {hotel.rooms && hotel.rooms.length > 0 ? (
           <div className="roomList">
