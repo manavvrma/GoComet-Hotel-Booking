@@ -6,9 +6,7 @@ import "../styles/HotelPage.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import BookingModal from "./BookingModal";
-
-const placeholderImage =
-  "https://cdn.builder.io/api/v1/image/assets/TEMP/45ff273a72d53cc3bb861e50cb0df036f0ae53012144356bb75566c79b1bf47e?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677";
+import placeholderImage from "../assets/images/hotel_background.jpg";
 
 export default function HotelPage() {
   const { hotelId } = useParams();

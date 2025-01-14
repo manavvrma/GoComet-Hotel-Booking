@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import { FaRupeeSign, FaMapMarkerAlt } from "react-icons/fa";
 import "../styles/HotelCard.css";
-
-const defaultImage =
-  "https://cdn.builder.io/api/v1/image/assets/TEMP/45ff273a72d53cc3bb861e50cb0df036f0ae53012144356bb75566c79b1bf47e?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677";
+import defaultImage from "../assets/images/hotel_background.jpg";
 
 export default function HotelCard({ hotel }) {
   const { id, name, city, rating, minPrice = 0, maxPrice = 0, image } = hotel;

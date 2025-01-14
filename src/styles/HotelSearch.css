@@ -18,14 +18,14 @@
   width: 100%;
 }
 
-.searchIcon,
-.calendarIcon,
+.searchIcon {
+  font-size: 15px;
+  color: rgba(10, 102, 187, 1);
+}
+
 .endIcon {
-  aspect-ratio: 0.79;
-  width: 11px;
-  margin: auto 0;
-  object-fit: contain;
-  object-position: center;
+  font-size: 15px;
+  color: rgba(10, 102, 187, 1);
 }
 
 .searchInput {
@@ -45,8 +45,13 @@
   border: 1px solid rgba(135, 135, 135, 1);
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 1);
-  min-width: 172px;
+  min-width: 175px;
   font-size: 14px;
+}
+
+.calendarIcon {
+  font-size: 10pxpx;
+  color: rgba(10, 102, 187, 1);
 }
 
 .dateDivider {
@@ -149,5 +154,5 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
-  color: #0a66bb;
+  color: rgba(10, 102, 187, 1);
 }

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
-import { IoMdPeople } from "react-icons/io"; // Importing the IoMdPeople icon
+import { IoMdPeople } from "react-icons/io";
+import { FaSearch, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa"; // Importing the icons
 import "../styles/HotelSearch.css";
 
 export default function HotelSearch({ onSelect }) {
@@ -59,7 +60,9 @@ export default function HotelSearch({ onSelect }) {
       return;
     }
 
-    navigate(`/hotel/${selected.id}`);
+    navigate(`/hotel/${selected.id}`, {
+      state: { checkIn: dates.checkIn, checkOut: dates.checkOut, guests },
+    });
   };
 
   return (
@@ -70,12 +73,7 @@ export default function HotelSearch({ onSelect }) {
       aria-label="Hotel search form"
     >
       <div className="searchInputContainer">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/65f9e3e1a91fbd0ee3d13250d2625379a6f4fe61810271a48a1269ff31df2bbe?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677"
-          alt="Search icon"
-          className="searchIcon"
-          aria-hidden="true"
-        />
+        <FaSearch className="searchIcon" aria-hidden="true" />
         <input
           type="text"
           className="searchInput"
@@ -84,12 +82,7 @@ export default function HotelSearch({ onSelect }) {
           onChange={(e) => setSearchTerm(e.target.value)}
           aria-label="Search hotels"
         />
-        <img
-          src="/icons/location.svg"
-          className="endIcon"
-          alt=""
-          aria-hidden="true"
-        />
+        <FaMapMarkerAlt className="endIcon" aria-hidden="true" />
         {results.length > 0 && (
           <div className="searchResults">
             <div className="resultsList">
@@ -122,12 +115,7 @@ export default function HotelSearch({ onSelect }) {
         role="group"
         aria-label="Date range selection"
       >
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb5b3a0864aadcad9ca70da82c24f9adbb34abcd0de7e36af91e98c75814c75c?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677"
-          className="calendarIcon"
-          alt="Calendar icon"
-        />
+        <FaCalendarAlt className="calendarIcon" aria-hidden="true" />
         <div
           tabIndex="0"
           role="button"
