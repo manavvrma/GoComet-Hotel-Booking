@@ -7,7 +7,7 @@
 }
 
 .searchInputContainer {
-  position: relative; /* Ensures the dropdown is positioned relative to this container */
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -15,7 +15,7 @@
   border: 1px solid rgba(135, 135, 135, 1);
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 1);
-  width: 100%; /* Make the input container take full width */
+  width: 100%;
 }
 
 .searchIcon,
@@ -38,15 +38,6 @@
 }
 
 .dateRangePickerContainer {
-  /* display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6.67px 12px;
-  border: 1px solid rgba(135, 135, 135, 1);
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 1);
-  font-size: 14px;
-  width: 140px; */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -54,6 +45,7 @@
   border: 1px solid rgba(135, 135, 135, 1);
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 1);
+  min-width: 192px;
 }
 
 .dateDivider {
@@ -79,38 +71,42 @@
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
   font-size: 14px;
+  border-radius: 2px;
 }
 
 .searchResults {
   border-radius: 0 0 3px 3px;
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 3px 13px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 100%; /* Position dropdown below the input box */
+  top: 105%;
   left: 0;
-  width: 100%; /* Ensure it matches the input's width */
-  padding-bottom: 10px;
+  width: 100%;
   color: rgba(0, 0, 0, 1);
-  z-index: 10;
+  z-index: 4;
 }
 
 .resultsList {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  margin-top: 7px;
+  margin: 0;
+  padding: 0;
 }
 
 .resultItem {
-  padding: 8px 0;
+  padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .resultItem:hover {
-  background-color: rgba(10, 102, 187, 0.05);
+  background-color: #0a65bb2c;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .hiddenDateInput {
