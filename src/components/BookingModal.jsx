@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/BookingModel.css";
 
@@ -14,7 +14,7 @@ export default function BookingModal({ hotel, room, onClose }) {
       return;
     }
     setError("");
-    // Handle booking logic here
+
     console.log("Booked:", {
       hotel,
       room,
