@@ -42,7 +42,7 @@
   cursor: pointer;
 
   display: flex;
-  align-items: center; /* Added padding on the right side */
+  align-items: center;
 }
 
 .signIn:hover {
