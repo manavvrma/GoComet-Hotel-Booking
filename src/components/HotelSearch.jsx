@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import { IoMdPeople } from "react-icons/io"; // Importing the IoMdPeople icon
 import "../styles/HotelSearch.css";
 
 export default function HotelSearch({ onSelect }) {
@@ -161,17 +162,20 @@ export default function HotelSearch({ onSelect }) {
         required
       />
 
-      <input
-        type="number"
-        className="guestsInput"
-        value={guests}
-        onChange={(e) => setGuests(Number(e.target.value))}
-        min="1"
-        aria-label={`Select number of guests: ${guests} guest${
-          guests !== 1 ? "s" : ""
-        } selected`}
-        required
-      />
+      <div className="guestsInputContainer">
+        <IoMdPeople className="peopleIcon" />
+        <input
+          type="number"
+          className="guestsInput"
+          value={guests}
+          onChange={(e) => setGuests(Number(e.target.value))}
+          min="1"
+          aria-label={`Select number of guests: ${guests} guest${
+            guests !== 1 ? "s" : ""
+          } selected`}
+          required
+        />
+      </div>
 
       <button type="submit" className="searchButton" aria-label="Search hotels">
         Search
