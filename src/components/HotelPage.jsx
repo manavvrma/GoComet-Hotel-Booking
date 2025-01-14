@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { AiFillStar } from "react-icons/ai";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import "../styles/HotelPage.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -63,14 +65,11 @@ export default function HotelPage() {
             <h1 className="hotelName1">{hotel.name}</h1>
             <div className="hotelLocationRating">
               <div className="hotelLocation1">
-                {hotel.city}, {hotel.country}
+                <FaMapMarkerAlt className="whiteIcon" /> {hotel.city},{" "}
+                {hotel.country}
               </div>
               <div className="hotelRating1">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a0edd4f4840f66e94fd23ed72b509da98580c5bcf8e564feb4d05c383cf0dbc?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677"
-                  alt="Rating star"
-                  className="ratingIcon1"
-                />
+                <AiFillStar className="whiteIcon" />
                 <span>{hotel.rating}</span>
               </div>
             </div>
