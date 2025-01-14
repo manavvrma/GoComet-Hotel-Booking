@@ -53,24 +53,28 @@ export default function HotelPage() {
       <Header />
       <main className="mainContent1">
         <div className="hotelBackground">
-          <h1 className="hotelName1">{hotel.name}</h1>
-          <div className="hotelLocation1">
-            {hotel.city} {hotel.country}
-          </div>
-          <div className="hotelRating1">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a0edd4f4840f66e94fd23ed72b509da98580c5bcf8e564feb4d05c383cf0dbc?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677"
-              alt="Rating star"
-              className="ratingIcon1"
-            />
-            <span>{hotel.rating}</span>
-          </div>
           <img
             src={placeholderImage}
             alt={`${hotel.name} hotel`}
             className="hotelBackgroundImage"
           />
           <div className="hotelBackgroundOverlay"></div>
+          <div className="hotelBackgroundContent">
+            <h1 className="hotelName1">{hotel.name}</h1>
+            <div className="hotelLocationRating">
+              <div className="hotelLocation1">
+                {hotel.city}, {hotel.country}
+              </div>
+              <div className="hotelRating1">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a0edd4f4840f66e94fd23ed72b509da98580c5bcf8e564feb4d05c383cf0dbc?placeholderIfAbsent=true&apiKey=a8dc494f9c0e460f8f3293610f9c1677"
+                  alt="Rating star"
+                  className="ratingIcon1"
+                />
+                <span>{hotel.rating}</span>
+              </div>
+            </div>
+          </div>
         </div>
         {hotel.rooms && hotel.rooms.length > 0 ? (
           <div className="roomList">

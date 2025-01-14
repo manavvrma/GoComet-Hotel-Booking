@@ -5,13 +5,18 @@
 .hotelBackground {
   position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 290px;
 }
 
 .hotelBackgroundImage {
   width: 100%;
-  height: 290px;
+  height: 100%;
   object-fit: cover;
   z-index: 0;
+  background-position: top 49px; /* Aligns the image from the top with a 49px offset */
 }
 
 .hotelBackgroundOverlay {
@@ -19,39 +24,38 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 290px;
+  height: 100%;
   background: rgba(0, 0, 0, 0.751);
-  z-index: 2;
+  z-index: 1;
 }
 
-.hotelName1,
-.hotelLocation1,
-.hotelRating1 {
+.hotelBackgroundContent {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   color: white;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hotelName1 {
-  top: 32%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 36px;
   font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.hotelLocationRating {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hotelLocation1 {
-  top: 58%;
-  left: 44%;
-  transform: translate(-50%, -50%);
   font-size: 14px;
 }
 
 .hotelRating1 {
-  top: 58%;
-  left: 54%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -74,12 +78,11 @@
 }
 
 .roomList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 40px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: center;
+  gap: 20px;
+  padding: 20px 30px;
 }
 
 .room {
@@ -168,6 +171,12 @@
   text-decoration: none;
   height: 34px;
   width: 152px;
+}
+
+.bookNowButton::after {
+  content: "→";
+  margin-left: 8px;
+  font-size: 16px;
 }
 
 .viewFacilitiesButton:hover {
