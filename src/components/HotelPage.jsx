@@ -70,6 +70,7 @@ export default function HotelPage() {
             alt={`${hotel.name} hotel`}
             className="hotelBackgroundImage"
           />
+          <div className="hotelBackgroundOverlay"></div>
         </div>
         {hotel.rooms && hotel.rooms.length > 0 ? (
           <div className="roomList">
